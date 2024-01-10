@@ -3,17 +3,17 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "GameFramework/Character.h"
-#include "ShooterCharacter.generated.h"
+#include "GameFramework/Pawn.h"
+#include "MyPawn.generated.h"
 
 UCLASS()
-class SIMPLESHOOTER_API AShooterCharacter : public ACharacter
+class SIMPLESHOOTER_API AMyPawn : public APawn
 {
 	GENERATED_BODY()
 
 public:
-	// Sets default values for this character's properties
-	AShooterCharacter();
+	// Sets default values for this pawn's properties
+	AMyPawn();
 
 protected:
 	// Called when the game starts or when spawned
@@ -26,12 +26,4 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
-private:
-	UPROPERTY(EditAnywhere)
-	float RotationRate = 10;
-
-	void MoveForward(float AxisValue);
-	void MoveRight(float AxisValue);
-	void LookUpRate(float AxisValue);
-	void LookRightRate(float AxisValue);
 };
