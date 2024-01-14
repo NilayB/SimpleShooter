@@ -33,6 +33,8 @@ public:
 
 	virtual float TakeDamage(float DamageAmount, struct FDamageEvent const &DamageEvent, class AController *EventInstigator, AActor *DamageCauser) override;
 
+	void Shoot();
+
 private:
 	UPROPERTY(EditAnywhere)
 	float RotationRate = 10;
@@ -52,5 +54,4 @@ private:
 	void MoveRight(float AxisValue);
 	void LookUpRate(float AxisValue);
 	void LookRightRate(float AxisValue);
-	void Shoot();
 };
